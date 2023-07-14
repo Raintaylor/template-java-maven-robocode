@@ -23,6 +23,8 @@ tasks:
       code --install-extension DotJoshJohnson.xml
     init: |
       mvn install -DskipTests=false
+      echo 'export ROBO_ROOT="$(pwd)"' >> ~/.bashrc
+      exec $SHELL
     command: |
       mvn clean install
 
